@@ -155,6 +155,7 @@ skin |  | Path to a folder with a Calamansi.js skin
 playlists |  | An object with playlists where each key is the name of the playlist. Each playlist is an array of tracks/audio sources. Besides the track source you can provide track info (although track info for mp3 files is read automatically from ID3 tags), including any number of custom fields. Bear in mind that the custom fields won't be displayed unless they are present in the skin itself.
 loop | false | Enable playlist loop by default
 shuffle | false | Enable playlist shuffle by default
+audioController | CalamansiAudio | A constructor of an object that governs audio playback
 volume | 100 | Default volume value [0-100]
 preloadTrackInfo | false | Load mp3 track info for all the tracks on page load. Might produce unexpected results when there are too many players on the page or tracks in the playlists.
 loadTrackInfoOnPlay | true | Load mp3 track info on track play

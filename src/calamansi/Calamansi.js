@@ -15,6 +15,7 @@ class Calamansi
             loadTrackInfoOnPlay: true,
             defaultAlbumCover: '',
             soundcloudClientId: '',
+            audioController: CalamansiAudio,
         }, options);
 
         // Make sure we have all the required options provided and the values
@@ -241,7 +242,7 @@ class Calamansi
 
     _loadTrack(track) {
         if (!this.audio) {
-            this.audio = new CalamansiAudio(this, track.source);
+            this.audio = new this._options.audioController(this, track.source);
 
             if (this._options.loadTrackInfoOnPlay) {
                 this._loadTrackInfo(track);
